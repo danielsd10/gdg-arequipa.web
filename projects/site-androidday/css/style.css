@@ -1,0 +1,177 @@
+*
+{
+	/*outline: 1px dashed #00FF00;*/
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color:#666;
+	background: url("../img/bg_pattern.png");
+}
+
+h1, h2, h3, h4
+{
+	font-family: 'Open Sans', sans-serif;
+	color: #CC0000;
+	font-weight: 300;
+}
+
+h1 { font-size: 24px; }
+h2{ font-size: 20px; }
+h3{ font-size: 18px; }
+h4{ font-size: 16px; }
+
+/*------------------------------------------------------------------------------------ Overlay Mensajes */
+.overlay { background: #000; opacity: 0.5; filter: alpha(opacity=50); position: fixed; top:0; bottom: 0; left: 0; right: 0; z-index: 1000; }
+.msg_cover { position: fixed; top:50%; left:50%; width: 300px; height: 150px; margin: -75px 0 0 -150px; background: #FFF; z-index: 1001; -moz-box-shadow: 2px 2px 25px rgba(0,0,0,0.5); -webkit-box-shadow: 2px 2px 25px rgba(0,0,0,0.2); -ms-box-shadow: 2px 2px 25px rgba(0,0,0,0.2); box-shadow: 2px 2px 25px rgba(0,0,0,0.5); text-align: center; }
+.msg_cover .title { font-size: 22px; line-height: 24px; margin: 0 0 15px 0; }
+.msg_cover .content { padding: 20px; }
+/*------------------------------------------------------------------------------------ Errores y alertas */
+.error_404, .error_500 { margin:50px 0; padding: 10px 0; border-top: 1px solid #E8E8E8; border-bottom: 1px solid #E8E8E8; background: url(../img/quickdev/bg_404.png) right center no-repeat; }
+.error_500 { background: url(../img/quickdev/bg_500.png) right center no-repeat; }
+
+
+/*------------------------------------------------------------------------------------ Header */
+#header
+{
+	background: #EB2327;
+}
+
+.header-mobile { background: #000; padding: 8px; height: 30px;}
+
+.menu-list { list-style: none; margin: 0; padding: 0; }
+.menu-list li { float:left; }
+.menu-list .menu-sublist { display: none; }
+.menu-item { display: block; font-weight: 700; color: #FFF; padding: 25px 20px; font-size: 13px; text-shadow: 1px 1px 0 #000; }
+.mobile .menu-item { padding: 10px; }
+.menu-item:hover { background: #bf2224; color: #FFF; text-decoration: none; }
+.menu-item:focus, .menu-item.active { background: #bf2224; outline: none; }
+.menu-logo { background: url(../img/header/logo_ribete.png) no-repeat; height: 0; width: 122px;
+	position: absolute; padding-top: 140px; overflow: hidden; margin: 0;
+	transition: all 0.2s ease;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+}
+.menu-logo.compact {
+	padding-top: 84px;
+	margin-top: -14px;
+}
+
+
+/*------------------------------------------------------------------------------------ Contenido */
+#content
+{
+	overflow: auto;
+	transition: background-position 0.5s ease;
+	-webkit-transition: background-position 0.5s ease;
+	-moz-transition: background-position 0.5s ease;
+	-o-transition: background-position 0.5s ease;
+}
+.mobile
+{
+	padding: 0 !important;
+}
+
+.visor { overflow: hidden;}
+.mobile .visor { padding: 0 15px; }
+
+
+/********************************************************** HOLA */
+#hola .title
+{
+	font-family: "Sansita One", sans-serif;
+	font-size: 70px;
+	line-height: 75px;
+	text-align: center;
+	color: #000;
+	margin: 80px 0 0 0;
+	text-shadow: 4px 4px 1px #CCC;
+}
+.mobile #hola .title
+{
+	font-size: 40px;
+	line-height: 45px;
+	margin: 30px 0 0 0;
+}
+
+#hola p
+{
+	margin: 80px 0 0 0;
+	font-size: 22px;
+	line-height: 30px;
+	text-align: center;
+}
+.mobile #hola p
+{
+	font-size: 15px;
+	margin: 30px 0 0 0;
+	line-height: 20px;
+}
+
+/********************************************************** PROYECTOS */
+.back_page
+{
+	display: block;
+	margin:10px;
+}
+.next_page
+{
+	display: block;
+	margin:10px;
+}
+#proyectos { background: url("../img/bg_proyectos.jpg"); }
+
+#proyectos .title
+{
+	padding: 20px;
+	border: 1px dotted #999;
+	border-width: 1px 0;
+	font-size: 20px;
+	line-height: 30px;
+	margin: 30px 0;
+	text-align: center;
+}
+.mobile #proyectos .title
+{
+	font-size: 13px;
+	line-height: 15px;
+	margin: 20px 0;
+	padding: 10px 0;
+}
+
+#proyectos .proyectos_lista_wrapper
+{
+	padding: 0;
+	/*outline: 1px solid #00FF00;*/
+}
+
+.sc_lista_proyectos_item
+{
+	/*display: none;*/
+}
+.sc_lista_proyectos_item h3
+{
+	color: #000;
+	font-weight: bold;
+	line-height: 25px;
+	margin: 5px 0;
+}
+.sc_lista_proyectos_item .proyecto_item_desc
+{
+	text-align: right;
+}
+.sc_lista_proyectos_item .proyecto_item_desc .resumen
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #000;
+}
+
+/********************************************************** SERVICIOS */
+#servicios { background: url("../img/bg_servicios.jpg"); }

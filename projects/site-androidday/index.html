@@ -16,6 +16,11 @@
 	<link type="text/css" href="css/style.css" rel="stylesheet" />
 	<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="plugins/tweenmax/plugins/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="plugins/tweenmax/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src="plugins/tweenmax/TweenMax.min.js"></script>
+	<script type="text/javascript" src="plugins/tweenmax/TimelineMax.min.js"></script>	
+	<script type="text/javascript" src="js/main.js"></script>
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 8]>	<link type="text/css" href="public/css/stylesIE7.css" rel="stylesheet" />	<![endif]-->
@@ -42,29 +47,30 @@
 <!-- Header Start -->
 <div id="header">
 	<div class="container">
+
 		<div class="header-mobile visible-phone">
-			<img id="logo_mobile" width="110" src="public/img/logo_qd.png" alt="QuickDev Logo"/>
+			<img id="logo_mobile" width="110" src="img/logo.png" alt="GDG Arequipa"/>
 			<div class="pull-right">
 				<a target="_blank" href="http://www.facebook.com/QuickDev" class="facebook">Facebook</a>
 				<a target="_blank" href="http://twitter.com/quickdev_pe" class="twitter">Twitter</a>
 			</div>
-		</div>
-
+		</div>	
+		
 		<!-- Separador logo nav -->
 
 		<div id="menu" class="row">
-			<h1 class="menu-logo hidden-phone">QuickDev SAC</h1>
+			<h1 class="menu-logo hidden-phone">Android Tour Perú</h1>
 			<ul class="menu-list pull-right">
-				<li><a tabindex="1" class="menu-item active" href="#hola">Android Tour</a></li>
-				<li><a tabindex="2" class="menu-item" href="#proyectos">Programa</a></li>
-				<li class="hidden-phone"><a tabindex="3" class="menu-item" href="#clientes">Speakers</a></li>
-				<li class="hidden-phone"><a tabindex="4" class="menu-item" href="#servicios">Sponsors</a></li>
-				<li><a tabindex="5" class="menu-item" href="#contacto">Colaboradores</a></li>
+				<li><a tabindex="1" class="menu-item active" href="#tour">Android Tour</a></li>
+				<li><a tabindex="2" class="menu-item" href="#programa">Programa</a></li>
+				<li class="hidden-phone"><a tabindex="3" class="menu-item" href="#speakers">Speakers</a></li>
+				<li class="hidden-phone"><a tabindex="4" class="menu-item" href="#sponsors">Sponsors</a></li>
+				<li class="hidden-phone"><a tabindex="5" class="menu-item" href="#colaboradores">Colaboradores</a></li>
 				<li class="visible-phone">
 					<a tabindex="6" class="menu-item" href="#mas"><span class="icon-chevron-down icon-white"></span></a>
 					<ul class="menu-sublist">
-						<li><a tabindex="7" class="menu-item" href="#clientes">Android Tour</a></li>
-						<li><a tabindex="8" class="menu-item" href="#servicios">Programa</a></li>
+						<li><a tabindex="7" class="menu-item" href="#tour">Android Tour</a></li>
+						<li><a tabindex="8" class="menu-item" href="#programa">Programa</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -76,220 +82,146 @@
 
 <!-- Content Start -->
 <div id="content">
-		<div id="hola" class="visor">
-	<div class="container">
-		<h2 class="title">Creamos experiencias<br/>para móviles y la web</h2>
-		<p>Somos especialistas en consultoría digital, expertos en desarrollo interactivo de sistemas y campañas digitales tanto para web como para móviles.
-			Somos un equipo de profesionales digitales con amplia experiencia en desarrollo de campañas en redes sociales y lo último en tecnología orientada a dispositivos móviles
-		</p>
-	</div>
-</div>
 
-<div id="proyectos" class="visor">
-	<div class="container">
-		<p class="title">La calidad de nuestros proyectos es gracias al trabajo y análisis de nuestros especialistas, estamos 100% comprometidos en lograr el éxito de su proyecto</p>
-
-		<div class="proyectos_lista_wrapper">
-			<div class="row-fluid">
-				<div class="span11">
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>COMBINATOR</h3>
-							<p class="resumen hidden-phone">Cliente: NO2 - Brahma<br/> Web App - Adobe Flash<br/> Noviembre - 2012 </p>
-							<p class="hidden-phone">Aplicación web donde el usuario desarrolla un test del cual obtiene como resultado un artista famoso. Puede combinarse con este a través de una foto, la cual puede ser publicada en el facebook, colocarla como cover o descargarla a su PC </p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/brahma.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>RETOS DE ULTRABOOK</h3>
-							<p class="resumen hidden-phone">Cliente: P-Per - Intel<br/> Desktop App - Adobe AIR<br/> Noviembre - 2012</p>
-							<p class="hidden-phone">Consiste en 3 juegos, los cuales resaltan las características de la nueva Ultrabook con procesador Intel.</p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/intel.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>DESAYUNO LOS 3 OSITOS</h3>
-							<p class="resumen hidden-phone">Cliente: Aya Solutions - 3 Ositos<br/>Facebook App - Adobe Flash<br/>Noviembre - 2012</p>
-							<p class="hidden-phone">Aplicación en la cual el usuario debe encontrar varios objetos escondidos en una grafica. </p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/3ositos.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>PREPAGUÉATE</h3>
-							<p class="resumen hidden-phone">Cliente: Tribal 121 - Movistar<br/>Facebook App - Adobe Flash<br/>Setiembre - 2012</p>
-							<p class="hidden-phone">Aplicación en Facebook que permite al usuario generar un baile basado en personajes predefinidos, elegidos por el mismo con rostros seleccionados desde sus fotos o las de sus amigos en Facebook</p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/movistar.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>TRANSFORMA TU PORTADA</h3>
-							<p class="resumen hidden-phone">Cliente:  NO2 - Cerveza Corona<br/> Facebook App - Adobe Flash<br/>Octubre - 2012</p>
-							<p class="hidden-phone">Aplicación en Facebook la cual consiste en crear un cover para Facebook, el usuario selecciona fotos de su galería, utiliza diferentes plantillas y filtros</p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/corona.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>JOJOJÓMETRO</h3>
-							<p class="resumen hidden-phone">Cliente:  Tekton Labs - Movistar<br/>Facebook App - Adobe Flash<br/>Noviembre - 2012</p>
-							<p class="hidden-phone">Aplicación que determina si la risa del usuario es parecida a la de Papa Noel, podrá compartir los resultados en Facebook y escuchar las risas de otros usuarios </p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/jojometro.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>MODA TE RETA</h3>
-							<p class="resumen hidden-phone">Cliente:121 Tribal - Radio Moda<br/>Web App - Adobe Flash<br/>Agosto - 2012</p>
-							<p class="hidden-phone">Juego en el cual el usuario demuestra conocimento de canciones populares, el usuario ira sumando puntos por sus aciertos y preguntas bonus </p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/modatereta.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>LOCOFACES</h3>
-							<p class="resumen hidden-phone">Cliente: Laguna Films<br/> Web App - Adobe Flash<br/> Junio - 2012</p>
-							<p class="hidden-phone">Aplicación que consiste en generar un video basado en personajes predefinidos elegidos por el usuario con rostros seleccionados desde imagenes de su PC o mediante sus álbumes de Facebook</p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/locabezas.png" alt=""></div>
-					</div>
-
-					<div class="sc_lista_proyectos_item row-fluid">
-						<div class="proyecto_item_desc span6">
-							<h3>TRINEO MOLITALIA</h3>
-							<p class="resumen hidden-phone">Cliente: Aya Solutions - Molitalia<br/>Facebook App - Adobe Flash<br/>Diciembre - 2012</p>
-							<p class="hidden-phone">Aplicación para Facebook, en la cual el usuario participa colocando imagenes de sus amigos de Facebook en el trineo de Molitalia.</p>
-						</div>
-						<div class="span6"><img src="public/img/proyectos/trineo.png" alt=""></div>
-					</div>
-				</div>
-				<div class="span1">
-					<a href="#" class="back_page"><img src="public/img/proyectos/flechaA.png" /></a>
-					<a href="#" class="next_page"><img src="public/img/proyectos/flechaB.png" /></a>
-				</div>
-			</div>
+	<div id="tour" class="visor">
+		<h2 class="title">Android Tour</h2>
+		<div class="container">
+			<h3>¿Qué es el Android Tour?</h3>
+			<hr>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
 		</div>
 	</div>
-</div>
-<div id="clientes" class="visor">
-	<div class="container">
-		<div class="list_clientes">
-			<div class="title">Confían en nosotros</div>
-			<div id="fig_clientes">
-				<img src="public/img/clientes/movistar.jpg" alt="">
-				<img src="public/img/clientes/phantasia.jpg" alt="">
-				<img src="public/img/clientes/circus.jpg" alt="">
-				<img src="public/img/clientes/a1.jpg" alt=""></li>
-				<img src="public/img/clientes/pper.jpg" alt="">
-				<img src="public/img/clientes/121.jpg" alt="">
-				<img src="public/img/clientes/no2.jpg" alt="">
-				<img src="public/img/clientes/digital.jpg" alt="">
-				<img src="public/img/clientes/limareal.jpg" alt="">
-			</div>
+
+	<div id="programa" class="visor">
+		<h2 class="title">Programa</h2>
+		<div class="container">
+			<h3>Programa</h3>
+			<hr>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
 		</div>
 	</div>
+
+	<div id="speakers" class="visor">
+		<h2 class="title">Speakers</h2>
+		<div class="container">
+			<p class="lead">Nuestros speakers...</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+		</div>
+	</div>
+	
+	<div id="sponsors" class="visor">
+		<h2 class="title">Sponsors</h2>
+		<div class="container">
+			<p class="lead">Algunos de nuestros sponsors...</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+		</div>
+	</div>
+	
+	<div id="colaboradores" class="visor">
+		<h2 class="title">Colaboradores</h2>
+		<div class="container">
+			<p class="lead">Algunos de nuestros colaboradores...</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Ut quam sem, dapibus quis placerat quis, pellentesque non velit.
+			Vivamus eros justo, porttitor elementum iaculis nec, pretium mollis urna.
+			Vestibulum sit amet erat dolor, a varius velit. Nunc in lorem neque,
+			in feugiat quam. Maecenas vel justo quam, sed dictum urna. Proin vehicula,
+			magna eu aliquam tristique, dolor risus sodales magna, sed semper orci purus ut lacus.
+			Nulla urna arcu, dapibus quis lobortis et, gravida et elit. Integer vitae eros est.
+			</p>
+		</div>
+	</div>
+
+	<div class="footer container">
+		<!-- Content for footer -->
+		<hr>
+		<div class="row-fluid">
+			<div class="span9">
+				<span>@2013 GDG Arequipa <a href="#">#AndroidTourPeru</a></span>
+			</div>
+			<div class="span3">
+				<div class="pull-right ">
+					<a href="#" target="_blank" class="img-social twitter" title="Twitter"></a>
+					<a href="#" target="_blank" class="img-social facebook" title="Facebook"></a>
+					<a href="#" target="_blank" class="img-social googleplus" title="Google+"></a>
+				</div>
+			</div>
+		<div>
+	</div>
 </div>
-<div id="servicios" class="visor">
-	<p>Servicios</p>
-</div>
-<div id="contacto" class="visor">
-	<p>Contacto</p>
-</div>
-
-
-
-<script type="text/javascript">
-
-	$(document).ready(initPage);
-
-	var currentSection = '';
-	var timeOutFitScreen;
-
-	function initPage()
-	{
-		$('.menu-item').click(MENU_CLICK_handler);
-		$('.menu-item:eq(0)').focus();
-
-		$(window).resize(fitToScreen);
-		fitToScreen();
-	}
-
-	function MENU_CLICK_handler()
-	{
-		var target_name = $(this).attr('href');
-		$('.menu-item').removeClass('active');
-		$(this).addClass('active');
-		scrollPage(target_name);
-		return false;
-	}
-
-	function scrollPage(_target)
-	{
-		var altoScreen = window.innerHeight - $('#header').height();
-		var posY = 0;
-
-		if(_target) currentSection = _target;
-
-		if(_target == '#hola')	$('.menu-logo').removeClass('compact');
-		else 					$('.menu-logo').addClass('compact');
-
-		switch (currentSection)
-		{
-			case '#home':
-				posY = altoScreen * 0;
-				break;
-			case '#proyectos':
-				posY = altoScreen * 1;
-				break;
-			case '#clientes':
-				posY = altoScreen * 2;
-				break;
-			case '#servicios':
-				posY = altoScreen * 3;
-				break;
-			case '#contacto':
-				posY = altoScreen * 4;
-				break;
-		}
-
-		TweenMax.to($('#content'), 0.8, {scrollTop:posY, ease:Quart.easeOut});
-	}
-
-	function fitToScreen()
-	{
-		if(window.innerWidth < 768)
-			$('body').addClass('mobile');
-		else
-			$('body').removeClass('mobile');
-
-		var altoScreen = window.innerHeight - $('#header').height();
-		$('#content, .visor').css('height', altoScreen + 'px');
-
-		if(currentSection != '')
-		{
-			clearTimeout(timeOutFitScreen);
-			timeOutFitScreen = setTimeout(scrollPage, 600);
-		}
-	}
-
-</script></div>
 <!-- Content End -->
 
 <!-- Footer web site -->
 <div id="footer">
-	<div class="container">
-		<!-- Content for footer -->
-	</div>
+
 </div>
 <!-- Footer end -->
 

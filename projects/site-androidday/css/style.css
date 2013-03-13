@@ -1,30 +1,29 @@
-*
-{
-	/*outline: 1px dashed #00FF00;*/
-}
-
-/*-----------------------------------------------------------------------------------------------------------------------------*/
-
 body
 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	font-weight: 300;
-	color:#666;
-	background: url("../img/bg_pattern.png");
+	font-size: 20px;
+	line-height: 24px;
+	font-weight: 200;
+	color: #000;
+	background: #F1F1F1;
 }
 
 h1, h2, h3, h4
 {
 	font-family: 'Open Sans', sans-serif;
-	color: #CC0000;
+	color: #000;
 	font-weight: 300;
 }
 
 h1 { font-size: 24px; }
 h2{ font-size: 20px; }
-h3{ font-size: 18px; }
+h3{ font-size: 18px; font-weight: bold; }
 h4{ font-size: 16px; }
+
+p.lead {
+	font-weight: bold;
+	margin-top: 20px;
+}
 
 /*------------------------------------------------------------------------------------ Overlay Mensajes */
 .overlay { background: #000; opacity: 0.5; filter: alpha(opacity=50); position: fixed; top:0; bottom: 0; left: 0; right: 0; z-index: 1000; }
@@ -39,7 +38,7 @@ h4{ font-size: 16px; }
 /*------------------------------------------------------------------------------------ Header */
 #header
 {
-	background: #EB2327;
+	background: #CCC;
 }
 
 .header-mobile { background: #000; padding: 8px; height: 30px;}
@@ -47,11 +46,17 @@ h4{ font-size: 16px; }
 .menu-list { list-style: none; margin: 0; padding: 0; }
 .menu-list li { float:left; }
 .menu-list .menu-sublist { display: none; }
-.menu-item { display: block; font-weight: 700; color: #FFF; padding: 25px 20px; font-size: 13px; text-shadow: 1px 1px 0 #000; }
+.menu-item { display: block; font-weight: 600; color: #FFF; padding: 60px 20px 20px 20px; font-size: 13px; /*text-shadow: 1px 1px 0 #000;*/ }
 .mobile .menu-item { padding: 10px; }
-.menu-item:hover { background: #bf2224; color: #FFF; text-decoration: none; }
-.menu-item:focus, .menu-item.active { background: #bf2224; outline: none; }
-.menu-logo { background: url(../img/header/logo_ribete.png) no-repeat; height: 0; width: 122px;
+.menu-item[href="#tour"] { background: #DA4940; }
+.menu-item[href="#programa"] { background: #4D8CF6; }
+.menu-item[href="#speakers"] { background: #0A9953 }
+.menu-item[href="#sponsors"] { background: #F8C63F; }
+.menu-item[href="#colaboradores"] { background: #4C4A4B; }
+.menu-item:hover { color: #FFF; text-decoration: none; }
+.menu-item:focus, .menu-item.active { outline: none; }
+
+.menu-logo { background: url(../img/logo.png) no-repeat; height: 0; width: 450px;
 	position: absolute; padding-top: 140px; overflow: hidden; margin: 0;
 	transition: all 0.2s ease;
 	-webkit-transition: all 0.2s ease;
@@ -62,7 +67,6 @@ h4{ font-size: 16px; }
 	padding-top: 84px;
 	margin-top: -14px;
 }
-
 
 /*------------------------------------------------------------------------------------ Contenido */
 #content
@@ -81,6 +85,79 @@ h4{ font-size: 16px; }
 .visor { overflow: hidden;}
 .mobile .visor { padding: 0 15px; }
 
+h2.title {
+	width: 750px;
+	padding: 30px 0px 30px 30px;
+	line-height: 30px;
+	background-color: #000;
+	color: #fff;
+	font-size: 40px;
+	background-image: url(../img/bkg_titles.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+#tour h2.title {
+	background-color: #DA4940;
+	background-position-y: 0px;
+}
+#programa h2.title {
+	background-color: #4D8CF6;
+	background-position-y: -90px;
+}
+#speakers h2.title {
+	background-color: #0A9953;
+	background-position-y: -180px;
+}
+#sponsors h2.title {
+	background-color: #F8C63F;
+	background-position-y: -270px;
+}
+#colaboradores h2.title {
+	background-color: #4C4A4B;
+	background-position-y: -360px;
+}
+
+hr {
+	height: 5px;
+	border: 0px;
+	background: url(../img/hr.gif) no-repeat;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+
+/*------------------------------------------------------------------------------------ Pie */
+.footer {
+	line-height: 48px;
+	padding-bottom: 5px;
+	font-size: 14px;
+}
+
+.footer hr {
+	height: 65px;
+	border: 0px;
+	background: url(../img/footer.png) no-repeat center center;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.img-social {
+	height: 48px;
+	width: 48px;
+	display: inline-block;
+	background: url(../img/social.png) no-repeat;
+	content: "";
+}
+
+.img-social.twitter {
+	background-position: 0px 0px;
+}
+.img-social.facebook {
+	background-position: -48px 0px;
+}
+.img-social.googleplus {
+	background-position: -96px 0px;
+}
 
 /********************************************************** HOLA */
 #hola .title

@@ -1,0 +1,12 @@
+# archivos de sistema y temporales
+~*
+*.tmp
+Thumbs.db
+
+# archivos de zend/eclipse
+/.settings
+.buildpath
+.project
+
+# repositorios
+.svn

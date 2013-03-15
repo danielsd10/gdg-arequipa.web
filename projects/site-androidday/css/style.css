@@ -4,7 +4,7 @@ body
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: 200;
-	color: #000;
+	color: #4C4A4B;
 	background: #F1F1F1;
 }
 
@@ -15,14 +15,25 @@ h1, h2, h3, h4
 	font-weight: 300;
 }
 
-h1 { font-size: 24px; }
+h1{ font-size: 24px; }
 h2{ font-size: 20px; }
 h3{ font-size: 18px; font-weight: bold; }
 h4{ font-size: 16px; }
 
+p {
+	margin-bottom: 25px;
+}
 p.lead {
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 25px;
+}
+
+hr {
+	height: 5px;
+	border: 0px;
+	background: url(../img/hr.gif) no-repeat;
+	margin-top: 0px;
+	margin-bottom: 20px;
 }
 
 /*------------------------------------------------------------------------------------ Overlay Mensajes */
@@ -46,15 +57,27 @@ p.lead {
 .menu-list { list-style: none; margin: 0; padding: 0; }
 .menu-list li { float:left; }
 .menu-list .menu-sublist { display: none; }
-.menu-item { display: block; font-weight: 600; color: #FFF; padding: 60px 20px 20px 20px; font-size: 13px; /*text-shadow: 1px 1px 0 #000;*/ }
+.menu-item {
+	display: block;
+	font-weight: 600;
+	color: #FFF;
+	padding: 60px 20px 20px 20px;
+	font-size: 13px;
+	/*text-shadow: 1px 1px 0 #000;*/
+}
 .mobile .menu-item { padding: 10px; }
-.menu-item[href="#tour"] { background: #DA4940; }
-.menu-item[href="#programa"] { background: #4D8CF6; }
-.menu-item[href="#speakers"] { background: #0A9953 }
-.menu-item[href="#sponsors"] { background: #F8C63F; }
-.menu-item[href="#colaboradores"] { background: #4C4A4B; }
+.menu-item[href="#tour"] { background-color: #DA4940; }
+.menu-item[href="#programa"] { background-color: #4D8CF6; }
+.menu-item[href="#speakers"] { background-color: #0A9953 }
+.menu-item[href="#sponsors"] { background-color: #F8C63F; }
+.menu-item[href="#colaboradores"] { background-color: #4C4A4B; }
 .menu-item:hover { color: #FFF; text-decoration: none; }
 .menu-item:focus, .menu-item.active { outline: none; }
+.menu-item.active {
+	background-image: url('../img/menu-item.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
 
 .menu-logo { background: url(../img/logo.png) no-repeat; height: 0; width: 450px;
 	position: absolute; padding-top: 140px; overflow: hidden; margin: 0;
@@ -118,12 +141,52 @@ h2.title {
 	background-position-y: -360px;
 }
 
-hr {
-	height: 5px;
-	border: 0px;
-	background: url(../img/hr.gif) no-repeat;
-	margin-top: 0px;
-	margin-bottom: 20px;
+#tour h3,
+#programa h3 {
+	font-size: 25px;
+	font-weight: 600;
+}
+
+.table td.text-center,
+#sponsors .row-fluid div[class*="span"],
+#colaboradores .row-fluid div[class*="span"] {
+	text-align: center;
+}
+
+#sponsors .row-fluid,
+#colaboradores .row-fluid {
+	margin-bottom: 30px;
+}
+
+#speakers .row-fluid img.img-rounded {
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+#speakers h4 {
+	font-size: 26px;
+	font-weight: bold;
+	color: #0A9953;
+	line-height: 36px;
+	border-bottom: 1px solid #0A9953;
+}
+#speakers h4 em {
+	color: #666;
+	font-size: 20px;
+}
+
+#speakers .row-fluid img.img-polaroid,
+#colaboradores img.img-polaroid {
+	padding: 10px;
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);	
+}
+
+#colaboradores h5,
+#colaboradores h5 small {
+	font-size: 15px;
 }
 
 /*------------------------------------------------------------------------------------ Pie */
@@ -158,97 +221,3 @@ hr {
 .img-social.googleplus {
 	background-position: -96px 0px;
 }
-
-/********************************************************** HOLA */
-#hola .title
-{
-	font-family: "Sansita One", sans-serif;
-	font-size: 70px;
-	line-height: 75px;
-	text-align: center;
-	color: #000;
-	margin: 80px 0 0 0;
-	text-shadow: 4px 4px 1px #CCC;
-}
-.mobile #hola .title
-{
-	font-size: 40px;
-	line-height: 45px;
-	margin: 30px 0 0 0;
-}
-
-#hola p
-{
-	margin: 80px 0 0 0;
-	font-size: 22px;
-	line-height: 30px;
-	text-align: center;
-}
-.mobile #hola p
-{
-	font-size: 15px;
-	margin: 30px 0 0 0;
-	line-height: 20px;
-}
-
-/********************************************************** PROYECTOS */
-.back_page
-{
-	display: block;
-	margin:10px;
-}
-.next_page
-{
-	display: block;
-	margin:10px;
-}
-#proyectos { background: url("../img/bg_proyectos.jpg"); }
-
-#proyectos .title
-{
-	padding: 20px;
-	border: 1px dotted #999;
-	border-width: 1px 0;
-	font-size: 20px;
-	line-height: 30px;
-	margin: 30px 0;
-	text-align: center;
-}
-.mobile #proyectos .title
-{
-	font-size: 13px;
-	line-height: 15px;
-	margin: 20px 0;
-	padding: 10px 0;
-}
-
-#proyectos .proyectos_lista_wrapper
-{
-	padding: 0;
-	/*outline: 1px solid #00FF00;*/
-}
-
-.sc_lista_proyectos_item
-{
-	/*display: none;*/
-}
-.sc_lista_proyectos_item h3
-{
-	color: #000;
-	font-weight: bold;
-	line-height: 25px;
-	margin: 5px 0;
-}
-.sc_lista_proyectos_item .proyecto_item_desc
-{
-	text-align: right;
-}
-.sc_lista_proyectos_item .proyecto_item_desc .resumen
-{
-	font-weight: bold;
-	font-size: 11px;
-	color: #000;
-}
-
-/********************************************************** SERVICIOS */
-#servicios { background: url("../img/bg_servicios.jpg"); }

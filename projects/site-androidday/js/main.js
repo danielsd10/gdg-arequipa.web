@@ -29,9 +29,6 @@ function scrollPage(_target)
 
 	if(_target) currentSection = _target;
 
-	if(_target == '#tour')	$('.menu-logo').removeClass('compact');
-	else 					$('.menu-logo').addClass('compact');
-
 	if (positions===null)
 	{
 		positions = [];

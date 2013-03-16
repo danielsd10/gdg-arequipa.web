@@ -10,6 +10,7 @@ function initPage()
 	$('.menu-item:eq(0)').focus();
 
 	$(window).resize(fitToScreen);
+	initTweets();
 	fitToScreen();
 }
 
@@ -76,4 +77,21 @@ function fitToScreen()
 		clearTimeout(timeOutFitScreen);
 		timeOutFitScreen = setTimeout(scrollPage, 600);
 	}
+}
+
+function initTweets()
+{
+	$("#tweetViewer").tweet({
+		join_text: "auto",
+		query: "android",
+		avatar_size: 48,
+		count: 12,
+		loading_text: "Cargando tweets..."
+		//refresh_interval: 5
+	}).bind("loaded", onTweetLoad);
+}
+
+function onTweetLoad()
+{
+
 }

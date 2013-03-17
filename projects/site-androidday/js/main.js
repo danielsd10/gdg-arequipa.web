@@ -81,7 +81,7 @@ function fitToScreen()
 
 function initTweets()
 {
-	$("#tweetViewer").tweet({
+	$("#tweetViewer .content").tweet({
 		join_text: "auto",
 		query: "android",
 		avatar_size: 48,
@@ -93,5 +93,15 @@ function initTweets()
 
 function onTweetLoad()
 {
+	TweenMax.staggerFrom($("#tweetViewer .content ul li a img"), 0.5, {css:{scale:2, opacity:0}, delay:1, ease:Quart.easeOut}, 0.1);
+	$("#tweetViewer .content ul li").mouseenter(function(){
+		TweenMax.set($(this).find('.tweet_text'),{css:{scale:1.5}});
+		TweenMax.to($(this).find('.tweet_text'), 0.5, {css:{scale:1, autoAlpha:1}, ease:Quart.easeOut});
+		TweenMax.to($(this).find('a img'), 0.5, {css:{'margin-left':'10px', 'margin-right':'-10px'}, ease:Quart.easeOut});
+	});
 
+	$("#tweetViewer .content ul li").mouseleave(function(){
+		TweenMax.to($(this).find('.tweet_text'), 0.5, {css:{scale:0.5, autoAlpha:0}, ease:Quart.easeOut});
+		TweenMax.to($(this).find('a img'), 0.5, {css:{'margin-left':'0px', 'margin-right':'0px'}, ease:Quart.easeOut});
+	});
 }

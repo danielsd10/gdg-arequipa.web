@@ -176,7 +176,8 @@ h2.title {
 	font-size: 20px;
 }
 
-#speakers .row-fluid img.img-polaroid,
+#speakers img.img-polaroid,
+#sponsors img.img-polaroid,
 #colaboradores img.img-polaroid {
 	padding: 10px;
 	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
@@ -189,6 +190,60 @@ h2.title {
 	font-size: 15px;
 }
 
+
+#sponsors .flipper {
+	height: 220px;
+	width: 220px;	
+}
+#sponsors .front,
+#sponsors .back {
+	-webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 500px;
+	-moz-border-radius: 500px;
+	border-radius: 500px;
+	border: 4px solid #fff;
+}
+#sponsors #isur .front {
+	background: #fff url("../img/sp_isur.jpg") center center no-repeat;
+}
+#sponsors #isur .back {
+	background-color: #020933;
+}
+#sponsors #kunan .front {
+	background: #fff url("../img/sp_kunan.jpg") center center no-repeat;
+}
+#sponsors #kunan .back {
+	background-color: #ff9900;
+}
+#sponsors #qd .front {
+	background: #fff url("../img/sp_qd.jpg") center center no-repeat;
+}
+#sponsors #qd .back {
+	background-color: #d01414;
+}
+#sponsors .back h4 {
+	margin-top: 30%;
+	color: #fff;
+	font-weight: bold;
+}
+
+.img-link {
+	height: 56px;
+	width: 56px;
+	display: inline-block;
+	background: url("../img/links.png") no-repeat;
+	content: "";
+}
+
+.img-link.web {
+	background-position: 0px 0px;
+}
+.img-link.gplus {
+	background-position: -56px 0px;
+}
+
 /*------------------------------------------------------------------------------------ Pie */
 .footer {
 	line-height: 48px;
@@ -199,7 +254,7 @@ h2.title {
 .footer hr {
 	height: 65px;
 	border: 0px;
-	background: url(../img/footer.png) no-repeat center center;
+	background: url("../img/footer.png") no-repeat center center;
 	margin-top: 0px;
 	margin-bottom: 10px;
 }
@@ -267,4 +322,63 @@ h2.title {
 	padding: 8px;
 	width: 150px;
 	position: absolute;
+}
+
+
+/*--------------------------------------------------------------------------------------- flipEffect */
+/* http://davidwalsh.name/css-flip */
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 220px;
+	height: 220px;
+}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+			
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+			
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
 }

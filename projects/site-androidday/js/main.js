@@ -33,11 +33,11 @@ function scrollPage(_target)
 	if (positions===null)
 	{
 		positions = [];
-		positions[0] = ($("#tour").offset()).top - $('#header').height();
-		positions[1] = ($("#programa").offset()).top - $('#header').height();
-		positions[2] = ($("#speakers").offset()).top - $('#header').height();
-		positions[3] = ($("#sponsors").offset()).top - $('#header').height();
-		positions[4] = ($("#colaboradores").offset()).top - $('#header').height();
+		positions[0] = ($("#tour").offset()).top - $('#header').height() + $("#content").scrollTop();
+		positions[1] = ($("#programa").offset()).top - $('#header').height() + $("#content").scrollTop();
+		positions[2] = ($("#speakers").offset()).top - $('#header').height() + $("#content").scrollTop();
+		positions[3] = ($("#sponsors").offset()).top - $('#header').height() + $("#content").scrollTop();
+		positions[4] = ($("#colaboradores").offset()).top - $('#header').height() + $("#content").scrollTop();
 	}
 	switch (currentSection)
 	{
